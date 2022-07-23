@@ -1,0 +1,305 @@
+@import "../fonts/fontface.css";
+
+:root {
+    --card_t1-c1: #bae1eb;
+    --card_t1-c2: #b4dee9;
+    --card_t1-c3: #a6d8e5;
+    --card_t1-c4: #97d2e1;
+    --card_t1-b1: #0db1db;
+    --card_t1-n1: #00a1e9;
+    --card_t1-n2: #336ca5;
+    --card_t1-n3: #00365c;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    text-decoration: none;
+    font-family: "GmarketSansMedium", Dotum, "돋움";
+}
+
+.char_info_wrap {
+    margin: auto;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.char_wrap {
+    position: relative;
+    margin: 5px auto 0 auto;
+    background-color: white;
+    width: 331px;
+    height: 510px;
+    min-width: 331px;
+    min-height: 510px;
+    animation: expand 1s ease-in;
+}
+
+
+.char_sum_img {
+    border: 1px solid black;
+    background-color: transparent;
+    position: absolute;
+    opacity: 1;
+    transition: all .5s ease;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 16px;
+    left: 50px;
+    top: 20px;
+    width: 224px;
+    height: 228px;
+    text-align: center;
+}
+.char_sum_img img{
+  object-fit: contain;
+  width: inherit;
+}
+
+.sch_logo {
+    display: none;
+    border: 1px solid black;
+    background-color: lightgray;
+    position: absolute;
+    overflow: hidden;
+    left: 70px;
+    z-index: 1;
+    width: 190px;
+    height: 190px;
+    bottom: 43px;
+    opacity: 0.5;
+    text-align: center;
+    writing-mode: vertical-rl;
+}
+
+.sch_logo.show {
+    display: block;
+    border: none;
+    background: none;
+}
+
+.sch_logo.show img {
+    width: 190px;
+    height: 190px;
+    opacity: 0.3;
+}
+
+.char_info {
+    left: 30px;
+    top: 260px;
+    position: absolute;
+    opacity: 1;
+    transition: all .5s ease;
+    margin: 0;
+    z-index: 3;
+    overflow: hidden;
+}
+
+
+.shLocal {
+    font-size: 30px;
+    position: absolute;
+    z-index: 2;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.15em;
+    color: #ddf0f5;
+    bottom: 20px;
+    left: 101px;
+}
+
+.char_info dt {
+    width: 100%;
+    float: left;
+    height: 28px;
+}
+
+.char_info dt span {
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -.05em;
+    color: #00365c;
+    float: left;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.char_info dt em {
+    float: left;
+    line-height: 30px;
+    color: #00a1e9;
+    margin-top: 5px;
+    font-style: normal;
+    letter-spacing: 0;
+    font-size: 18px;
+}
+
+.char_info dd {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -.05em;
+    color: #596e83;
+
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+
+
+.char_info dd.tt,
+.char_info dd.tt ruby {
+    line-height: 20px;
+    color: #336ca5;
+    letter-spacing: 0;
+    font-size: 20px;
+}
+
+.char_info dd.tt ruby {
+    font-size: 25px;
+    font-style: normal;
+    font-family: "Noto Sans JP", sans-serif !important;
+}
+
+.char_info dd.tt ruby rt {
+    font-weight: bold;
+    font-family: "GmarketSansMedium", Dotum, "돋움";
+}
+
+.char_info dd.tt.j {
+    display: block;
+    margin: 0;
+    margin-inline-start: 60px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-align: start;
+    text-indent: 0px;
+    line-height: normal;
+    text-emphasis: none;
+    font-style: normal;
+    font-weight: bolder;
+    min-height: 1rem;
+}
+
+svg {
+    margin: 5px 0 0 -6.5px;
+}
+
+svg path#svg_1 {}
+
+svg path#svg_2 {}
+
+svg path#svg_3 {}
+
+svg path#svg_4 {}
+
+canvas {
+    position: absolute;
+    top: 26px;
+    right: 20px;
+    border: 1px solid black;
+}
+
+canvas.show {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+    right: 40px;
+    border: none;
+    top: 160px;
+}
+
+form {
+    display: none;
+    text-align: center;
+    transition-delay: 0.5s;
+}
+
+form.show {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+select {
+    margin-left: 5px;
+}
+
+ul.side {
+    position: absolute;
+    top: 0;
+    margin: 10px 0 0 0;
+    list-style: none;
+
+}
+
+ul.side li {
+    animation: expand 1s ease-in;
+}
+
+.side li button {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    color: #0db1db;
+}
+
+.side li:nth-child(odd) {
+    margin-bottom: 5px;
+}
+
+ul.side li.i {
+    display: block;
+}
+
+ul.side.f li.i {
+    display: none;
+}
+
+ul.side li.f {
+    display: none;
+}
+
+ul.side.f li.f {
+    display: block;
+}
+
+
+/* image save css */
+body.iSave {
+    font-family: initial;
+}
+
+body.iSave .char_wrap {
+    margin: 0;
+}
+
+body.iSave .char_info dd.tt.j {
+    font-size: 0.9rem;
+    letter-spacing: -0.6px;
+}
+#chrN,#chrEN{
+    border-color: #ff8484;
+}
+
+@keyframes expand {
+    0% {
+        opacity: 0;
+        bottom: 100px
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0px
+    }
+}
