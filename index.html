@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="stylesheet" href="./css/mein.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
-    
     <script src="https://cdn.jsdelivr.net/npm/dom-to-image@latest/src/dom-to-image.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jsbarcode@latest/dist/barcodes/JsBarcode.code128.min.js"></script>
     <script src="./src/L10N/localTrans.js"></script>
     <script src="./src/L10N/index.js"></script>
-    <script src="./src/gen.js"></script>
+    <script src="./src/BlueCard/index.js"></script>
+    <script src="./src/index.js"></script>
+    <script>
+        window.onload = () => {
+            new Blue(localText, true, 'char_info_wrap')
+        }
+    </script>
 </head>
 
 <body>
